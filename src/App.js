@@ -3,20 +3,22 @@ import './App.css';
 function App() {
   return (
     <div className="App">
-<ul class="nav flex-column">
-  <li class="nav-item">
-    <a class="nav-link active" aria-current="page" href="#">Active</a>
-  </li>
-  <li class="nav-item">
-    <a class="nav-link" href="#">Link</a>
-  </li>
-  <li class="nav-item">
-    <a class="nav-link" href="#">Link</a>
-  </li>
-  <li class="nav-item">
-    <a class="nav-link disabled">Disabled</a>
-  </li>
+<nav class ="navbar bg-dark">
+<ul class ="navbar-nav">
+<li class ="nav-item">
+<a  href="#"> Home </a>
+</li>
+<li class ="nav-item">
+<a href="#"> Services </a>
+</li>
+<li class ="nav-item">
+<a  href="#"> Contact </a>
+</li>
+<li class ="nav-item">
+<a  href="#"> Blogs </a>
+</li>
 </ul>
+</nav>
     </div>
   );
 }
