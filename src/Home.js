@@ -1,7 +1,7 @@
 import './App.css';
 import logo from "./logo.png";
 
-function App() {
+function Home() {
   return (
     <div className="App">
       <div class="container-fluid">
@@ -84,4 +84,4 @@ function App() {
   );
 }
 
-export default App;
+export default Home;
