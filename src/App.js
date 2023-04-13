@@ -6,7 +6,8 @@ function App() {
 <nav class ="navbar bg-dark">
 <ul class ="navbar-nav">
 <li class ="nav-item">
-<a  href="#"> Home </a>
+<a  href="#"> 🧑‍🔬
+ </a>
 </li>
 <li class ="nav-item">
 <a href="#"> Services </a>
