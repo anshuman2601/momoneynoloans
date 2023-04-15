@@ -4,6 +4,7 @@ import title from "./title.png";
 import {Link} from 'react-router-dom';
 import Terms from './Terms';
 import Videos from "./Videos";
+//import aod from "./aod_pic.png";
 
 function Home() {
   return (
@@ -18,14 +19,7 @@ function Home() {
             </div>
             <div class="col-4 text-center">
               <a class="blog-header-logo text-dark" href="#">
-                {
-                  <img
-                    src={title}
-                    width="164"
-                    height="108"
-                    alt="BigCo Inc. logo"
-                  />
-                }
+              {<img src={title} width="164" height="108" alt="logo"/>}
               </a>
             </div>
 
@@ -90,20 +84,11 @@ function Home() {
         </div>
 
         <div class="jumbotron p-3 p-md-5 text-white rounded bg-dark">
-          <div class="col-md-6 px-0">
-            <h1 class="display-4 font-italic">
-              Title of a longer featured blog post
-            </h1>
-            <p class="lead my-3">
-              Multiple lines of text that form the lede, informing new readers
-              quickly and efficiently about what's most interesting in this
-              post's contents.
-            </p>
-            <p class="lead mb-0">
-              <a href="#" class="text-white font-weight-bold">
-                Continue reading...
-              </a>
-            </p>
+        <div class="col-md-6 px-1">
+          <h1 class="display-4 font-italic">A 'mild' recession is now likely this year, Federal Reserve says</h1>
+          <p class="lead my-3">The economy will take a hit as a result of recent banking turmoil, minutes from the central bank show.</p>
+          <p class="lead mb-0"><a href="https://www.nbcnews.com/business/economy/mild-recession-now-likely-year-federal-reserve-says-rcna79405" class="text-white font-weight-bold">Continue reading...</a></p>
+
           </div>
         </div>
 
@@ -161,11 +146,9 @@ function Home() {
         </div>
         </div>
 
-        <aside class="col-md-4 blog-sidebar">
-          <div class="p-3 mb-3 bg-light rounded">
+        
             
-            
-            </div>
+          
 
           <aside class="col-md-4 blog-sidebar">
             <div class="p-3 mb-3 bg-light rounded">
