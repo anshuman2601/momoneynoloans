@@ -1,12 +1,14 @@
 import React from 'react';
 import Home from './Home';
 import Quiz from './Quiz';
-
 import Terms from './Terms';
 import Videos from './Videos';
 import Login from './Login';
 import Register from './Register';
-import { BrowserRouter, Route, Routes, Link } from 'react-router-dom';
+import Study from './Study';
+import News from './News';
+import Profile from './Profile';
+import { BrowserRouter, Route, Routes } from 'react-router-dom';
 
 function App(){
   return (
@@ -18,6 +20,9 @@ function App(){
         <Route path="/videos" element={<Videos />} />
         <Route path="/login" element={<Login />} />
         <Route path="/register" element={<Register />} />
+        <Route path="/study" element={<Study />} />
+        <Route path="/news" element={<News />} />
+        <Route path="/profile" element={<Profile />} />
       </Routes>
     </BrowserRouter>
   );

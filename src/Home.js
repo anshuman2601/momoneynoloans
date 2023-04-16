@@ -4,85 +4,22 @@ import title from "./title.png";
 import {Link} from 'react-router-dom';
 import Terms from './Terms';
 import Videos from "./Videos";
+import Study from "./Study";
+import Navbar from './Navbar';
 import article from "./articlehome.png";
 //import aod from "./aod_pic.png";
 
 function Home() {
   return (
     <div className="App">
-      <div class="container">
-        <header class="blog-header py-3">
-          <div class="row flex-nowrap justify-content-between align-items-center">
-            <div class="col-4 pt-1">
-              <Link className="text-muted" to="/login">
-                Log-In / Create an Account
-              </Link>
-            </div>
-            <div class="col-4 text-center">
-              <a class="blog-header-logo text-dark" href="#">
-              {<img src={title} width="164" height="108" alt="logo"/>}
-              </a>
-            </div>
+    <Navbar />
 
-            <div class="col-4 d-flex justify-content-end align-items-center">
-              <a class="text-muted" href="#">
-                <div class="input-group">
-                  <input
-                    type="search"
-                    class="form-control rounded"
-                    placeholder="Search"
-                    aria-label="Search"
-                    aria-describedby="search-addon"
-                  />
-                  <button type="button" class="btn btn-outline-primary">
-                    search
-                  </button>
-                </div>
-              </a>
-            </div>
-          </div>
-        </header>
 
-        <div class="nav-scroller py-1 mb-2">
-          <nav class="nav d-flex justify-content-between">
-            <a class="p-2 text-muted" href="#">
-              World
-            </a>
-            <a class="p-2 text-muted" href="#">
-              U.S.
-            </a>
-            <a class="p-2 text-muted" href="#">
-              Technology
-            </a>
-            <a class="p-2 text-muted" href="#">
-              Design
-            </a>
-            <a class="p-2 text-muted" href="#">
-              Culture
-            </a>
-            <a class="p-2 text-muted" href="#">
-              Business
-            </a>
-            <a class="p-2 text-muted" href="#">
-              Politics
-            </a>
-            <a class="p-2 text-muted" href="#">
-              Opinion
-            </a>
-            <a class="p-2 text-muted" href="#">
-              Science
-            </a>
-            <a class="p-2 text-muted" href="#">
-              Health
-            </a>
-            <a class="p-2 text-muted" href="#">
-              Style
-            </a>
-            <a class="p-2 text-muted" href="#">
-              Travel
-            </a>
-          </nav>
-        </div>
+    
+
+
+    
+    <main role="main" class="container">
 
 
        
@@ -124,16 +61,15 @@ function Home() {
           <div class="col-md-6">
             <div class="card flex-md-row mb-4 box-shadow h-md-250">
               <div class="card-body d-flex flex-column align-items-start">
-                <strong class="d-inline-block mb-2 text-success">Design</strong>
+                <strong class="d-inline-block mb-2 text-success ">Concept of the Day</strong>
                 <h3 class="mb-0">
                   <a class="text-dark" href="#">
-                    Post title
+                    Moral Hazard
                   </a>
                 </h3>
                 <div class="mb-1 text-muted">Nov 11</div>
                 <p class="card-text mb-auto">
-                  This is a wider card with supporting text below as a natural
-                  lead-in to additional content.
+                Moral hazard is a situation in which one party gets involved in a risky event knowing that it is protected against the risk and the other party will incur the cost.
                 </p>
                 <a href="#">Continue reading</a>
               </div>
@@ -141,9 +77,12 @@ function Home() {
             </div>
           </div>
         </div>
-      </div>
 
-    <main role="main" class="container">
+
+
+
+
+
       <div class="row">
         <div class="col-md-6 blog-main">
           <h3 class="pb-3 mb-4 font-italic border-bottom">
