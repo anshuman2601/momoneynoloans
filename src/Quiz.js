@@ -6,9 +6,9 @@ function Quiz(){
   return(
     <div>
     <Navbar />
-      <h1> Knowledge Quiz</h1>
-   
 
+    <main role="main" class="container">
+      <h1> Knowledge Quiz</h1>
       <div class="row col-5">
         <h4 class="fw-bold text-center mt-3"></h4>
           <form class=" bg-white px-4" action="">
@@ -45,6 +45,7 @@ function Quiz(){
     <button type="button" class="btn btn-primary">Submit</button>
   </div>
       </div>
+      </main>
       </div>
   );
 }

@@ -6,7 +6,12 @@ function Profile() {
   return (
     <div>
         <Navbar />
+        <main role="main" class="container">
         <h1>Profile Page</h1>
+
+        </main>
+        
+
     </div>
   )
 }
