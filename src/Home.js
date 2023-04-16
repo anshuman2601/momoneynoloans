@@ -4,6 +4,7 @@ import title from "./title.png";
 import {Link} from 'react-router-dom';
 import Terms from './Terms';
 import Videos from "./Videos";
+import article from "./articlehome.png";
 //import aod from "./aod_pic.png";
 
 function Home() {
@@ -83,14 +84,21 @@ function Home() {
           </nav>
         </div>
 
-        <div class="jumbotron p-3 p-md-5 text-white rounded bg-dark">
-        <div class="col-md-6 px-1">
-          <h1 class="display-4 font-italic">A 'mild' recession is now likely this year, Federal Reserve says</h1>
-          <p class="lead my-3">The economy will take a hit as a result of recent banking turmoil, minutes from the central bank show.</p>
-          <p class="lead mb-0"><a href="https://www.nbcnews.com/business/economy/mild-recession-now-likely-year-federal-reserve-says-rcna79405" class="text-white font-weight-bold">Continue reading...</a></p>
 
+       
+
+       <div class="container">
+        <div class="row text-white rounded bg-dark">
+          <div class="col">
+            <h1 class="display-4 font-italic">A 'mild' recession is now likely this year, Federal Reserve says</h1>
+           <p class="lead my-3">The economy will take a hit as a result of recent banking turmoil, minutes from the central bank show.</p>
+           <p class="lead mb-0"><a href="https://www.nbcnews.com/business/economy/mild-recession-now-likely-year-federal-reserve-says-rcna79405" class="text-white font-weight-bold">Continue reading...</a></p>
           </div>
+          <div class="col">
+            {<img src={article} class="img-thumbnail" width="500" height="300" alt="artcle"/>}
+          </div> 
         </div>
+      </div>
 
         <div class="row mb-2">
           <div class="col-md-6">
