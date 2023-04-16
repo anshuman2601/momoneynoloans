@@ -89,7 +89,7 @@ function Home() {
 
         <aside class="col-md-6 blog-sidebar">
             <h3 class="pb-3 mb-4 font-italic border-bottom">
-            Knowledge Level Status
+            User's Knowledge Level
           </h3>
           
 
@@ -98,12 +98,7 @@ function Home() {
       </main>
 
       <footer class="blog-footer">
-        <p>
-          Blog template built for{" "}
-          <a href="https://getbootstrap.com/">Bootstrap</a> by{" "}
-          <a href="https://twitter.com/mdo">@mdo</a>.
-        </p>
-        <p>
+        <p></p><p>© 2023 FinEd.com </p><p>
           <a href="#">Back to top</a>
         </p>
       </footer>
