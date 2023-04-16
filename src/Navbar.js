@@ -13,13 +13,13 @@ function Navbar() {
               </Link>
             </div>
             <div class="col-4 text-center">
-              <a class="blog-header-logo text-dark" href="#">
+              <Link class="blog-header-logo text-dark" href="#">
               {<img src={title} width="164" height="108" alt="logo"/>}
-              </a>
+              </Link>
             </div>
 
             <div class="col-4 d-flex justify-content-end align-items-center">
-              <a class="text-muted" href="#">
+              <Link class="text-muted" href="#">
                 <div class="input-group">
                   <input
                     type="search"
@@ -32,28 +32,28 @@ function Navbar() {
                     search
                   </button>
                 </div>
-              </a>
+              </Link>
             </div>
           </div>
         </header>
 
         <div class="nav-scroller py-1 mb-2">
           <nav class="nav d-flex justify-content-between">
-            <a class="p-2 text-muted" href="#">
+            <Link class="p-2 text-muted" to="/">
               Home
-            </a>
-            <Link class="p-2 text-muted" to="/Study">
+            </Link>
+            <Link class="p-2 text-muted" to="/study">
               Study
             </Link>
-            <a class="p-2 text-muted" href="#">
+            <Link class="p-2 text-muted" to="/news">
               World News
-            </a>
-            <a class="p-2 text-muted" href="#">
+            </Link>
+            <Link class="p-2 text-muted" to="/quiz">
               Quiz
-            </a>
-            <a class="p-2 text-muted" href="#">
+            </Link>
+            <Link class="p-2 text-muted" to="/profile">
               User Profile & Goals
-            </a>
+            </Link>
           </nav>
         </div>
 

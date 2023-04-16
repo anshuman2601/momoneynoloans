@@ -1,9 +1,11 @@
-import './App.css';
-
+import React from 'react';
+import { Link } from 'react-router-dom';
+import Navbar from './Navbar';
 
 function Quiz(){
   return(
-    <div className="App">
+    <div>
+    <Navbar />
       <h1> Knowledge Quiz</h1>
    
 
@@ -42,13 +44,8 @@ function Quiz(){
   <div class="text-end">
     <button type="button" class="btn btn-primary">Submit</button>
   </div>
-</div>
-      
-
-
-
-   
-    </div>
+      </div>
+      </div>
   );
 }
 
