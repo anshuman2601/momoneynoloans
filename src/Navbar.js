@@ -13,13 +13,13 @@ function Navbar() {
               </Link>
             </div>
             <div class="col-4 text-center">
-              <Link class="blog-header-logo text-dark" href="#">
+            <Link class="p-2 text-muted" to="/">
               {<img src={title} width="164" height="108" alt="logo"/>}
               </Link>
             </div>
 
             <div class="col-4 d-flex justify-content-end align-items-center">
-              <Link class="text-muted" href="#">
+            <Link class="p-2 text-muted" to="/Study">
                 <div class="input-group">
                   <input
                     type="search"
