@@ -1,11 +1,16 @@
 import React from 'react';
-
+import Navbar from './Navbar';
 function Study() {
   return (
     <div>
-        Study
-        sldkfblsdjfblaifbhlaeriuhf
+    <Navbar />
+
+    This is Study Page
+
     </div>
+   
+
+
   )
 }
 

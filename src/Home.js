@@ -5,65 +5,22 @@ import {Link} from 'react-router-dom';
 import Terms from './Terms';
 import Videos from "./Videos";
 import Study from "./Study";
+import Navbar from './Navbar';
 //import aod from "./aod_pic.png";
 
 function Home() {
   return (
     <div className="App">
-      <div class="container">
-        <header class="blog-header py-3">
-          <div class="row flex-nowrap justify-content-between align-items-center">
-            <div class="col-4 pt-1">
-              <Link className="text-muted" to="/login">
-                Log-In / Create an Account
-              </Link>
-            </div>
-            <div class="col-4 text-center">
-              <a class="blog-header-logo text-dark" href="#">
-              {<img src={title} width="164" height="108" alt="logo"/>}
-              </a>
-            </div>
+    <Navbar />
 
-            <div class="col-4 d-flex justify-content-end align-items-center">
-              <a class="text-muted" href="#">
-                <div class="input-group">
-                  <input
-                    type="search"
-                    class="form-control rounded"
-                    placeholder="Search"
-                    aria-label="Search"
-                    aria-describedby="search-addon"
-                  />
-                  <button type="button" class="btn btn-outline-primary">
-                    search
-                  </button>
-                </div>
-              </a>
-            </div>
-          </div>
-        </header>
 
-        <div class="nav-scroller py-1 mb-2">
-          <nav class="nav d-flex justify-content-between">
-            <a class="p-2 text-muted" href="#">
-              Home
-            </a>
-            <a class="p-2 text-muted" href="#">
-              Study
-            </a>
-            <a class="p-2 text-muted" href="#">
-              World News
-            </a>
-            <a class="p-2 text-muted" href="#">
-              Quiz
-            </a>
-            <a class="p-2 text-muted" href="#">
-              User Profile & Goals
-            </a>
-          </nav>
-        </div>
+    
 
-        <div class="jumbotron p-3 p-md-5 text-white rounded bg-dark">
+
+    
+    <main role="main" class="container">
+
+    <div class="jumbotron p-3 p-md-5 text-white rounded bg-dark">
         <div class="col-md-6 px-1">
           <h1 class="display-4 font-italic">A 'mild' recession is now likely this year, Federal Reserve says</h1>
           <p class="lead my-3">The economy will take a hit as a result of recent banking turmoil, minutes from the central bank show.</p>
@@ -112,9 +69,12 @@ function Home() {
             </div>
           </div>
         </div>
-      </div>
 
-    <main role="main" class="container">
+
+
+
+
+
       <div class="row">
         <div class="col-md-6 blog-main">
           <h3 class="pb-3 mb-4 font-italic border-bottom">
