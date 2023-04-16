@@ -6,6 +6,7 @@ import Terms from './Terms';
 import Videos from "./Videos";
 import Study from "./Study";
 import Navbar from './Navbar';
+import Chart from './Chart';
 import article from "./articlehome.png";
 //import aod from "./aod_pic.png";
 
@@ -94,12 +95,15 @@ function Home() {
           <Videos class="embed-responsive-item"/>
           </div>
         </div>
-        <div class="col">
-            <h3 class=" pb-3 mb-4 font-italic border-bottom">
-            Knowledge Level
-            </h3>
-            <p> hello </p>
-  
+
+          
+
+        <div class="col-md-6 blog-sidebar">
+            <h3 class="pb-3 mb-4 font-italic border-bottom">
+            User's Knowledge Level
+          </h3>
+          <Chart />
+          </div>
         </div>
       </div>
       </div>
