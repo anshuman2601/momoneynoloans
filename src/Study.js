@@ -3,6 +3,16 @@ import Navbar from './Navbar';
 
 function Study() {
 
+
+
+
+
+
+
+
+
+
+  
 const terms = [
   {title:"Employed",
   description:"This category includes those who at the time of the survey worked as paid employees, worked in their own business, or worked as unpaid workers in a family member’s business. It also includes those who were not working but who had jobs from which they were temporarily absent due to, for example, vacation, illness, or bad weather."},

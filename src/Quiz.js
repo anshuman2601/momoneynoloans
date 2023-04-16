@@ -1,13 +1,49 @@
-import React from 'react';
-import { Link } from 'react-router-dom';
-import Navbar from './Navbar';
+import React,{useState} from 'react'
+import Navbar from './Navbar'
+import {Link} from "react-router-dom"
 
-function Quiz(){
+export const quiz = {
+  topic: 'Javascript',
+  level: 'Beginner',
+  totalQuestions: 4,
+  perQuestionScore: 5,
+  questions: [
+    {
+      question:
+        'Which function is used to serialize an object into a JSON string in Javascript?',
+      choices: ['stringify()', 'parse()', 'convert()', 'None of the above'],
+      type: 'MCQs',
+      correctAnswer: 'stringify()',
+    },
+    {
+      question:
+        'Which of the following keywords is used to define a variable in Javascript?',
+      choices: ['var', 'let', 'var and let', 'None of the above'],
+      type: 'MCQs',
+      correctAnswer: 'var and let',
+    },
+    {
+      question:
+        'Which of the following methods can be used to display data in some form using Javascript?',
+      choices: [
+        'document.write()',
+        'console.log()',
+        'window.alert',
+        'All of the above',
+      ],
+      type: 'MCQs',
+      correctAnswer: 'All of the above',
+    },
+    {
+      question: 'How can a datatype be declared to be a constant type?',
+      choices: ['const', 'var', 'let', 'constant'],
+      type: 'MCQs',
+      correctAnswer: 'const',
+    },
+  ],
+}
 
 
-const questions = [
-  {}
-]
 
 
 
@@ -16,68 +52,168 @@ const questions = [
 
 
 
-  return(
+
+const Quiz = () => {
+  const [activeQuestion, setActiveQuestion] = useState(0)
+  const [selectedAnswer, setSelectedAnswer] = useState('')
+  const [showResult, setShowResult] = useState(false)
+  const [selectedAnswerIndex, setSelectedAnswerIndex] = useState(null)
+  const [result, setResult] = useState({
+    score: 0,
+    correctAnswers: 0,
+    wrongAnswers: 0,
+  })
+
+  const { questions } = quiz
+  const { question, choices, correctAnswer } = questions[activeQuestion]
+
+  const onClickNext = () => {
+    setSelectedAnswerIndex(null)
+    setResult((prev) =>
+      selectedAnswer
+        ? {
+            ...prev,
+            score: prev.score + 5,
+            correctAnswers: prev.correctAnswers + 1,
+          }
+        : { ...prev, wrongAnswers: prev.wrongAnswers + 1 }
+    )
+    if (activeQuestion !== questions.length - 1) {
+      setActiveQuestion((prev) => prev + 1)
+    } else {
+      setActiveQuestion(0)
+      setShowResult(true)
+    }
+  }
+
+  const onAnswerSelected = (answer, index) => {
+    setSelectedAnswerIndex(index)
+    if (answer === correctAnswer) {
+      setSelectedAnswer(true)
+    } else {
+      setSelectedAnswer(false)
+    }
+  }
+
+  const addLeadingZero = (number) => (number > 9 ? number : `0${number}`)
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  return (
     <div>
-    <Navbar />
+      <Navbar />
+      <main role="main" class="container">
 
-    <main role="main" class="container">
-      <h1> Knowledge Test</h1>
+
+
 
 
 
       <div className="col-md-6 mx-auto mt-5">
                         <div className="card">
                             <div className="card-header">
-                                <h1 className="h3 mb-0">Question 1</h1>
+                                <h1 className="h3 mb-0">          <div>
+            <span className="active-question-no">
+              {addLeadingZero(activeQuestion + 1)}
+            </span>
+            <span className="total-question">
+              /{addLeadingZero(questions.length)}
+            </span>
+          </div></h1>
                             </div>
                             <div className="card-body">
-                                
-                            <h4 class="fw-bold text-center mt-3"></h4>
-          <form class=" bg-white px-4" action="">
-             <p class="fw-bold">Being on a budget means:</p>
-            <div class="form-check mb-2">
-             <input class="form-check-input" type="radio" name="exampleForm" id="radioExample1" />
-             <label class="form-check-label" for="radioExample1">
-             a. You pay bills every month at the due date
-             </label>
-            </div>
-            <div class="form-check mb-2">
-             <input class="form-check-input" type="radio" name="exampleForm" id="radioExample2" />
-               <label class="form-check-label" for="radioExample2">
-               b. You made a plan of your expenses to be less than or equal to your income
-               </label>
-            </div>
-            <div class="form-check mb-2">
-              <input class="form-check-input" type="radio" name="exampleForm" id="radioExample3" />
-               <label class="form-check-label" for="radioExample3">
-                 c. You are earning enough money to be able to live well
-               </label>
-           </div>
-           <div class="form-check mb-2">
-              <input class="form-check-input" type="radio" name="exampleForm" id="radioExample3" />
-               <label class="form-check-label" for="radioExample3">
-                  d. Your bills are generally paid by every due date
-               </label>
-           </div>
-
-
-
-  </form>
-
-
-                                
+                                <form>
+                                    <div className="mb-3">
+                                        <label className="form-label" htmlFor="email">Email address</label>
+                                        <input type="email" className="form-control" name="email" id="email" aria-describedby="emailHelp" />
+                                    </div>
+                                    <div className="mb-3">
+                                        <label className="form-label" htmlFor="password">Password</label>
+                                        <input type="password" className="form-control" name="password" id="password" />
+                                    </div>
+                                    <button type="submit" className="btn btn-primary">Login</button>
+                                </form>
                             </div>
                             <div className="card-footer">
-                            <div class="text-end">
-    <button type="button" class="btn btn-primary">Next</button>
-  </div>
+                                <p className="text-muted">
+                                    Don't have an account? <Link to="/register" className="text-decoration-none">Register</Link>
+                                </p>
                             </div>
                         </div>
                     </div>
 
-      </main>
-      </div>
-  );
+
+
+
+
+
+
+
+
+    <div className="quiz-container">
+      {!showResult ? (
+        <div>
+          <div>
+            <span className="active-question-no">
+              {addLeadingZero(activeQuestion + 1)}
+            </span>
+            <span className="total-question">
+              /{addLeadingZero(questions.length)}
+            </span>
+          </div>
+          <h2>{question}</h2>
+          <ul>
+            {choices.map((answer, index) => (
+              <li
+                onClick={() => onAnswerSelected(answer, index)}
+                key={answer}
+                className={
+                  selectedAnswerIndex === index ? 'selected-answer' : null
+                }>
+                {answer}
+              </li>
+            ))}
+          </ul>
+          <div className="flex-right">
+            <button
+              onClick={onClickNext}
+              disabled={selectedAnswerIndex === null}>
+              {activeQuestion === questions.length - 1 ? 'Finish' : 'Next'}
+            </button>
+          </div>
+        </div>
+      ) : (
+        <div className="result">
+          <h3>Result</h3>
+          <p>
+            Total Question: <span>{questions.length}</span>
+          </p>
+          <p>
+            Total Score:<span> {result.score}</span>
+          </p>
+          <p>
+            Correct Answers:<span> {result.correctAnswers}</span>
+          </p>
+          <p>
+            Wrong Answers:<span> {result.wrongAnswers}</span>
+          </p>
+        </div>
+      )}
+    </div>
+    </main>
+    </div>
+  )
 }
 
-export default Quiz;
+export default Quiz
