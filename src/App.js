@@ -8,6 +8,7 @@ import Register from './Register';
 import Study from './Study';
 import News from './News';
 import Profile from './Profile';
+import Search from './Search';
 import { BrowserRouter, Route, Routes } from 'react-router-dom';
 
 function App(){
@@ -23,6 +24,7 @@ function App(){
         <Route path="/study" element={<Study />} />
         <Route path="/news" element={<News />} />
         <Route path="/profile" element={<Profile />} />
+        <Route path="/search" element={<Search />} />
       </Routes>
     </BrowserRouter>
   );
