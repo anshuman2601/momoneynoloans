@@ -32,8 +32,8 @@ function Home() {
            <p class="lead my-3">The economy will take a hit as a result of recent banking turmoil, minutes from the central bank show.</p>
            <p class="lead mb-0"><a href="https://www.nbcnews.com/business/economy/mild-recession-now-likely-year-federal-reserve-says-rcna79405" class="text-white font-weight-bold">Continue reading...</a></p>
           </div>
-          <div class="col">
-            {<img src={article} class="img" width="470" height="320" alt="artcle"/>}
+          <div class="col ">
+            {<img src={article} class="img-fluid"  alt="artcle"/>}
           </div> 
         </div>
       </div>
@@ -82,16 +82,18 @@ function Home() {
 
 
 
+    
 
 
+      <div class="container">
       <div class="row">
-        <div class="col-md-6 blog-main">
+        <div class="col">
           <h3 class="pb-3 mb-4 font-italic border-bottom">
             Tutorial Video
           </h3>
-        <div>
-        <Videos />
-        </div>
+          <div class="embed-responsive embed-responsive-16by9">
+          <Videos class="embed-responsive-item"/>
+          </div>
         </div>
 
           
@@ -103,6 +105,10 @@ function Home() {
           <Chart />
           </div>
         </div>
+      </div>
+      </div>
+
+
       </main>
 
       <footer class="blog-footer">
