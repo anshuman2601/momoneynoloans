@@ -1,6 +1,6 @@
 import React from 'react';
 import Home from './Home';
-import Article from './Article';
+import Quiz from './Quiz';
 
 import Terms from './Terms';
 import Videos from './Videos';
@@ -13,7 +13,7 @@ function App(){
     <BrowserRouter>
       <Routes>
         <Route path="/" element={<Home />} />
-        <Route path="/article" element={<Article />} /> 
+        <Route path="/quiz" element={<Quiz />} /> 
         <Route path="/terms" element={<Terms />} />
         <Route path="/videos" element={<Videos />} />
         <Route path="/login" element={<Login />} />
