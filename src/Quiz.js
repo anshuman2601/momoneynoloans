@@ -3,6 +3,19 @@ import { Link } from 'react-router-dom';
 import Navbar from './Navbar';
 
 function Quiz(){
+
+
+const questions = [
+  {}
+]
+
+
+
+
+
+
+
+
   return(
     <div>
     <Navbar />
@@ -21,7 +34,7 @@ function Quiz(){
                                 
                             <h4 class="fw-bold text-center mt-3"></h4>
           <form class=" bg-white px-4" action="">
-             <p class="fw-bold">1. Being on a budget means:</p>
+             <p class="fw-bold">Being on a budget means:</p>
             <div class="form-check mb-2">
              <input class="form-check-input" type="radio" name="exampleForm" id="radioExample1" />
              <label class="form-check-label" for="radioExample1">
