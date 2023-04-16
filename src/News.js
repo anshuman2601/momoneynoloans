@@ -6,7 +6,10 @@ function News() {
   return (
     <div>
         <Navbar />
+        <main role="main" class="container">
         <h1>News Page</h1>
+        </main>
+       
     </div>
   )
 }

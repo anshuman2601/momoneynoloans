@@ -32,7 +32,7 @@ function Home() {
            <p class="lead mb-0"><a href="https://www.nbcnews.com/business/economy/mild-recession-now-likely-year-federal-reserve-says-rcna79405" class="text-white font-weight-bold">Continue reading...</a></p>
           </div>
           <div class="col">
-            {<img src={article} class="img-thumbnail" width="500" height="300" alt="artcle"/>}
+            {<img src={article} class="img" width="470" height="320" alt="artcle"/>}
           </div> 
         </div>
       </div>

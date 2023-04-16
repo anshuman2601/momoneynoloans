@@ -2,12 +2,13 @@
 
 import React from 'react';
 import { Link } from 'react-router-dom';
-
+import Navbar from './Navbar';
 function Register() {
     return (
         <div className="container">
+            <Navbar />
             <div className="row">
-                <div className="col-md-6 mx-auto">
+                <div className="col-md-6 mx-auto mt-5">
                     <div className="card">
                         <div className="card-header">
                             <h1 className="h3 mb-0">Register</h1>
