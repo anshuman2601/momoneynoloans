@@ -8,9 +8,18 @@ function Quiz(){
     <Navbar />
 
     <main role="main" class="container">
-      <h1> Knowledge Quiz</h1>
-      <div class="row col-5">
-        <h4 class="fw-bold text-center mt-3"></h4>
+      <h1> Knowledge Test</h1>
+
+
+
+      <div className="col-md-6 mx-auto mt-5">
+                        <div className="card">
+                            <div className="card-header">
+                                <h1 className="h3 mb-0">Question 1</h1>
+                            </div>
+                            <div className="card-body">
+                                
+                            <h4 class="fw-bold text-center mt-3"></h4>
           <form class=" bg-white px-4" action="">
              <p class="fw-bold">1. Being on a budget means:</p>
             <div class="form-check mb-2">
@@ -41,10 +50,18 @@ function Quiz(){
 
 
   </form>
-  <div class="text-end">
-    <button type="button" class="btn btn-primary">Submit</button>
+
+
+                                
+                            </div>
+                            <div className="card-footer">
+                            <div class="text-end">
+    <button type="button" class="btn btn-primary">Next</button>
   </div>
-      </div>
+                            </div>
+                        </div>
+                    </div>
+
       </main>
       </div>
   );
