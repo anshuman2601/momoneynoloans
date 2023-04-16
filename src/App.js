@@ -6,7 +6,8 @@ import Terms from './Terms';
 import Videos from './Videos';
 import Login from './Login';
 import Register from './Register';
-import { BrowserRouter, Route, Routes, Link } from 'react-router-dom';
+import Study from './Study';
+import { BrowserRouter, Route, Routes } from 'react-router-dom';
 
 function App(){
   return (
@@ -18,6 +19,7 @@ function App(){
         <Route path="/videos" element={<Videos />} />
         <Route path="/login" element={<Login />} />
         <Route path="/register" element={<Register />} />
+        <Route path="/study" element={<Study />} />
       </Routes>
     </BrowserRouter>
   );

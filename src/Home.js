@@ -4,6 +4,7 @@ import title from "./title.png";
 import {Link} from 'react-router-dom';
 import Terms from './Terms';
 import Videos from "./Videos";
+import Study from "./Study";
 //import aod from "./aod_pic.png";
 
 function Home() {
