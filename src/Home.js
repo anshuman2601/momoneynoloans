@@ -96,12 +96,10 @@ function Home() {
 
         <h3 class="pb-3 mb-4 font-italic border-bottom">
         User Profile</h3> 
-        <Chart />
+        <Chart className=""/>
           </div> 
         </div>
       </div>
-
-       
 
 
       </main>
