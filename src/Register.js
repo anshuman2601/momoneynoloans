@@ -27,6 +27,15 @@ function Register() {
                                     <label className="form-label" htmlFor="password">Password</label>
                                     <input type="password" className="form-control" name="password" id="password" />
                                 </div>
+                                <div className="mb-3">
+                                    <label className="form-label" htmlFor="occupation">Occupation</label>
+                                    <select class="form-select" aria-label="Default select example">
+                                    
+                                        <option selected>Choose Occupation</option>
+                                        <option value="1">Student</option>
+                                        <option value="2">Professional</option>
+                                    </select>
+                                </div>
                                 <button type="submit" className="btn btn-primary">Register</button>
                             </form>
                         </div>
