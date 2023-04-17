@@ -27,6 +27,7 @@ function Home() {
        
 
        <div class="container">
+        <br></br>
         <div class="row text-white rounded bg-dark">
           <div class="col">
             <h1 class="display-4 font-italic">A 'mild' recession is now likely this year, Federal Reserve says</h1>
@@ -38,7 +39,7 @@ function Home() {
           </div> 
         </div>
       </div>
-
+<br />
         <div class="row mb-2">
           <div class="col-md-6">
             <div class="card flex-md-row mb-4 box-shadow h-md-250">
