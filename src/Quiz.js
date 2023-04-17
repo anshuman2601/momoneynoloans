@@ -1,7 +1,6 @@
 import React,{useState} from 'react'
 import Navbar from './Navbar'
 import {Link} from "react-router-dom"
-
 export const quiz = {
   topic: 'Javascript',
   level: 'Beginner',
@@ -42,7 +41,6 @@ export const quiz = {
     },
   ],
 }
-
 
 
 
@@ -104,6 +102,7 @@ const Quiz = () => {
 
 
 
+  
 
 
 
@@ -116,76 +115,13 @@ const Quiz = () => {
       <main role="main" class="container">
 
 
-
-
-
-      <div className="col-md-6 mx-auto mt-5">
-                        <div className="card">
-                            <div className="card-header">
-                                <h1 className="h3 mb-0">          <div>
-            <span className="active-question-no">
-              {addLeadingZero(activeQuestion + 1)}
-            </span>
-            <span className="total-question">
-              /{addLeadingZero(questions.length)}
-            </span>
-          </div></h1>
-                            </div>
-                            <div className="card-body">
-                                <form>
-                                    <div className="mb-3">
-                                        <label className="form-label" type= "text" >{question}</label>
-                                    </div>
-                                    <div className="mb-3">
-                                    <div class="form-check">
-                                        <input class="form-check-input" type="radio" name="flexRadioDefault" id="flexRadioDefault1"/>
-                                        <label class="form-check-label" for="flexRadioDefault1">
-                                          {choices[0]}
-                                        </label>
-                                    </div>
-                                    <div class="form-check">
-                                        <input class="form-check-input" type="radio" name="flexRadioDefault" id="flexRadioDefault2" checked/>
-                                        <label class="form-check-label" for="flexRadioDefault2">
-                                           {choices[1]}
-                                        </label>
-                                    </div>
-                                    <div class="form-check">
-                                        <input class="form-check-input" type="radio" name="flexRadioDefault" id="flexRadioDefault3" checked/>
-                                        <label class="form-check-label" for="flexRadioDefault3">
-                                           {choices[2]}
-                                        </label>
-                                    </div>
-                                    <div class="form-check">
-                                        <input class="form-check-input" type="radio" name="flexRadioDefault" id="flexRadioDefault4" checked/>
-                                        <label class="form-check-label" for="flexRadioDefault4">
-                                           {choices[3]}
-                                        </label>
-                                    </div>
-                                        
-                                    </div>
-
-                                    <div className="flex-right">
-                                       <button onClick={onClickNext} disabled={selectedAnswerIndex === null}>
-                                         {activeQuestion === questions.length - 1 ? 'Finish' : 'Next'}
-                                      </button>
-                                    </div>
-
-                                </form>
-                            </div>  
-                        </div>
-                    </div>
-
-
-  
-
-
-
-
-
-    <div className="quiz-container">
-      {!showResult ? (
-        <div>
-          <div>
+      <div className="container">
+            <div className="row">
+                <div className="col-md-6 mx-auto mt-5">
+                    <div className="card">
+                        <div className="card-header">
+                            <h1 className="h3 mb-0">
+                            <div>
             <span className="active-question-no">
               {addLeadingZero(activeQuestion + 1)}
             </span>
@@ -193,15 +129,29 @@ const Quiz = () => {
               /{addLeadingZero(questions.length)}
             </span>
           </div>
+
+
+
+                            </h1>
+                        </div>
+                        <div className="card-body">
+                            
+                        <div className="quiz-container">
+      {!showResult ? (
+        <div>
+
           <h2>{question}</h2>
-          <ul>
+          
+          
+          <ul class="list-group list-group-light">
             {choices.map((answer, index) => (
-              <li
+              <li class="list-group-item"
                 onClick={() => onAnswerSelected(answer, index)}
                 key={answer}
                 className={
                   selectedAnswerIndex === index ? 'selected-answer' : null
                 }>
+                  
                 {answer}
               </li>
             ))}
@@ -235,6 +185,41 @@ const Quiz = () => {
         </div>
       )}
     </div>
+
+
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+  
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    
     </main>
     </div>
   )
