@@ -8,6 +8,7 @@ import Study from "./Study";
 import Navbar from './Navbar';
 import Chart from './Chart';
 import article from "./articlehome.png";
+import Profile from './Profile';
 //import aod from "./aod_pic.png";
 
 function Home() {
@@ -82,10 +83,29 @@ function Home() {
 
 
 
+
+        <div class="container">
+        <div class="row">
+        <div class="col-md-6 blog-sidebar mt-4">
+        <h3 class="pb-3 mb-4 font-italic border-bottom">
+        Tutorial Video</h3>          
+        <Videos />
+        </div>
+        <div class="col mt-4">
+
+        <h3 class="pb-3 mb-4 font-italic border-bottom">
+        User Profile</h3> 
+        <Chart />
+          </div> 
+        </div>
+      </div>
+
+       
+
     
 
 
-      <div class="container">
+      {/* <div class="container">
       <div class="row">
         <div class="col">
           <h3 class="pb-3 mb-4 font-italic border-bottom">
@@ -96,16 +116,23 @@ function Home() {
           </div>
         </div>
 
-          
+        <div class="col">
+          <h3 class="pb-3 mb-4 font-italic border-bottom">
+            Tutorial Video
+          </h3>
+          <div class="embed-responsive embed-responsive-16by9">
+          <Videos class="embed-responsive-item"/>
+          </div>
+        </div>
 
-        <div class="col-md-6 blog-sidebar">
+        <div class="col-md-4 blog-sidebar">
             <h3 class="pb-3 mb-4 font-italic border-bottom">
             User's Knowledge Level
           </h3>
           <Chart />
           </div>
         </div>
-      </div>
+      </div> */}
 
 
       </main>

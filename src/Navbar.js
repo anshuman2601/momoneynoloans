@@ -18,8 +18,26 @@ function Navbar() {
               </Link>
             </div>
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
             <div class="col-4 d-flex justify-content-end align-items-center">
-            <Link class="p-2 text-muted" to="/Study">
+            <Link class="p-2 text-muted" to="#">
+              
                 <div class="input-group">
                   <input
                     type="search"
