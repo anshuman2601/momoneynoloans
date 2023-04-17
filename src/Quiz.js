@@ -10,35 +10,35 @@ export const quiz = {
   questions: [
     {
       question:
-        'Which function is used to serialize an object into a JSON string in Javascript?',
-      choices: ['stringify()', 'parse()', 'convert()', 'None of the above'],
+        '1. Being on a budget means:',
+      choices: ['a. You pay bills every month at the due date', 'b. You made a plan of your expenses to be less than or equal to your income ', 'c. You are earning enough money to be able to live well', 'd. Your bills are generally paid by every due date'],
       type: 'MCQs',
-      correctAnswer: 'stringify()',
+      correctAnswer: 'b. You made a plan of your expenses to be less than or equal to your income ',
     },
     {
       question:
-        'Which of the following keywords is used to define a variable in Javascript?',
-      choices: ['var', 'let', 'var and let', 'None of the above'],
+        '2. What is considered an excellent credit score?',
+      choices: ['a. 700 to 850 ', 'b. 500 to 560', 'c. 561 to 600', 'd. 1000 to 1500'],
       type: 'MCQs',
-      correctAnswer: 'var and let',
+      correctAnswer: 'a. 700 to 850 ',
     },
     {
       question:
-        'Which of the following methods can be used to display data in some form using Javascript?',
+        '3. Which is a method to fund your college education?',
       choices: [
-        'document.write()',
-        'console.log()',
-        'window.alert',
-        'All of the above',
+        'a. Apply for financial aid using the FAFSA and TAP applications',
+        'b. Seek out less expensive college alternatives',
+        'c. Seek out college scholarships',
+        'd. All of the above',
       ],
       type: 'MCQs',
-      correctAnswer: 'All of the above',
+      correctAnswer: 'd. All of the above',
     },
     {
-      question: 'How can a datatype be declared to be a constant type?',
-      choices: ['const', 'var', 'let', 'constant'],
+      question: '4. What is not a method to improve your credit score?',
+      choices: ['a. Pay all your bills on time', 'b. Maintain your older credit cards', 'c. Keep your credit card balances under 30% of your credit limit', 'd. Always pay in cash and do not get any credit cards'],
       type: 'MCQs',
-      correctAnswer: 'const',
+      correctAnswer: 'd. Always pay in cash and do not get any credit cards',
     },
   ],
 }
@@ -119,7 +119,6 @@ const Quiz = () => {
 
 
 
-
       <div className="col-md-6 mx-auto mt-5">
                         <div className="card">
                             <div className="card-header">
@@ -135,27 +134,49 @@ const Quiz = () => {
                             <div className="card-body">
                                 <form>
                                     <div className="mb-3">
-                                        <label className="form-label" htmlFor="email">Email address</label>
-                                        <input type="email" className="form-control" name="email" id="email" aria-describedby="emailHelp" />
+                                        <label className="form-label" type= "text" >{question}</label>
                                     </div>
                                     <div className="mb-3">
-                                        <label className="form-label" htmlFor="password">Password</label>
-                                        <input type="password" className="form-control" name="password" id="password" />
+                                    <div class="form-check">
+                                        <input class="form-check-input" type="radio" name="flexRadioDefault" id="flexRadioDefault1"/>
+                                        <label class="form-check-label" for="flexRadioDefault1">
+                                          {choices[0]}
+                                        </label>
                                     </div>
-                                    <button type="submit" className="btn btn-primary">Login</button>
+                                    <div class="form-check">
+                                        <input class="form-check-input" type="radio" name="flexRadioDefault" id="flexRadioDefault2" checked/>
+                                        <label class="form-check-label" for="flexRadioDefault2">
+                                           {choices[1]}
+                                        </label>
+                                    </div>
+                                    <div class="form-check">
+                                        <input class="form-check-input" type="radio" name="flexRadioDefault" id="flexRadioDefault3" checked/>
+                                        <label class="form-check-label" for="flexRadioDefault3">
+                                           {choices[2]}
+                                        </label>
+                                    </div>
+                                    <div class="form-check">
+                                        <input class="form-check-input" type="radio" name="flexRadioDefault" id="flexRadioDefault4" checked/>
+                                        <label class="form-check-label" for="flexRadioDefault4">
+                                           {choices[3]}
+                                        </label>
+                                    </div>
+                                        
+                                    </div>
+
+                                    <div className="flex-right">
+                                       <button onClick={onClickNext} disabled={selectedAnswerIndex === null}>
+                                         {activeQuestion === questions.length - 1 ? 'Finish' : 'Next'}
+                                      </button>
+                                    </div>
+
                                 </form>
-                            </div>
-                            <div className="card-footer">
-                                <p className="text-muted">
-                                    Don't have an account? <Link to="/register" className="text-decoration-none">Register</Link>
-                                </p>
-                            </div>
+                            </div>  
                         </div>
                     </div>
 
 
-
-
+  
 
 
 
@@ -193,6 +214,9 @@ const Quiz = () => {
             </button>
           </div>
         </div>
+
+
+
       ) : (
         <div className="result">
           <h3>Result</h3>
