@@ -132,7 +132,8 @@ function Search() {
 
   return (
     <div>
-      <input type="text" value={searchTerm} onChange={handleSearch} />
+      <input type="search" value={searchTerm} onChange={handleSearch}/>
+      <button class="btn btn-outline-primary" onClick={handleSearch} >Search</button>
       <ul>
         {searchResults.map((result, index) => (
           <li key={index}>

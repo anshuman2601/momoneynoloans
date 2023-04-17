@@ -31,10 +31,20 @@ export const data = {
   ],
 };
 
+export const options = {
+  responsive: true,
+  maintainAspectRatio: false, // add this option to disable aspect ratio
+  plugins: {
+    legend: {
+      position: 'right'
+    }
+  }
+};
+
 export default function Chart() {
   return (
     <div>
-      <Doughnut data={data} />
+      <Doughnut data={data} options={options} width={275} height={275}/>
     </div>
   );
 }

@@ -1,6 +1,7 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
 import title from "./title.png";
+import Search from './Search';
 
 function Navbar() {
   return (
@@ -36,20 +37,9 @@ function Navbar() {
 
 
             <div class="col-4 d-flex justify-content-end align-items-center">
-            <Link class="p-2 text-muted" to="#">
                 <div class="input-group">
-                  <input
-                    type="search"
-                    class="form-control rounded"
-                    placeholder="Search"
-                    aria-label="Search"
-                    aria-describedby="search-addon"
-                  />
-                  <button type="button" class="btn btn-outline-primary">
-                    search
-                  </button>
+                  <Search />
                 </div>
-              </Link>
             </div>
           </div>
         </header>
