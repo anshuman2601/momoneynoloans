@@ -1,16 +1,18 @@
 import React, { useState } from 'react';
 import { useNavigate, Link } from 'react-router-dom';
 import Navbar from './Navbar';
-import Profile from './Profile';
 
 function Login() {
   const navigate = useNavigate();
   const [email, setEmail] = useState('');
+  const [password, setPassword] = useState('');
 
   const handleLogin = (e) => {
     e.preventDefault();
-    setEmail(e.target.email.value);
-    navigate('/profile', { state: { email: e.target.email.value } });
+    // Do your login logic here
+    console.log('Email:', email);
+    console.log('Password:', password);
+    navigate('/profile', { state: { email: email } });
   };
 
   return (
@@ -35,6 +37,8 @@ function Login() {
                     id="email"
                     aria-describedby="emailHelp"
                     required
+                    value={email}
+                    onChange={(e) => setEmail(e.target.value)}
                   />
                 </div>
                 <div className="mb-3">
@@ -47,6 +51,8 @@ function Login() {
                     name="password"
                     id="password"
                     required
+                    value={password}
+                    onChange={(e) => setPassword(e.target.value)}
                   />
                 </div>
                 <button type="submit" className="btn btn-primary">
@@ -65,8 +71,6 @@ function Login() {
           </div>
         </div>
       </div>
-
-      {email && <Profile email={email} />}
     </div>
   );
 }
