@@ -11,39 +11,40 @@ function Profile() {
   
   return (
     <div>
-        <Navbar />
-        <main role="main" className="container">
-          <h1>{name}'s Knowledge Level</h1>
+      <Navbar />
+      <main role="main" className="container">
+        <h1>{name}'s Knowledge Level</h1>
 
-          <div className="container">
-            <div className="row text-white rounded">
-              
-              <div className="col-md-5 blog-sidebar mt-4">
-                <Chart />
-              </div>
+        <div className="container">
+          <div className="row text-white rounded">
+            <div className="col-md-5 blog-sidebar mt-4">
+              <Chart />
+            </div>
 
-              <div className="col">
-                <div className="card flex-md-row mb-4 box-shadow h-md-250">
-                  <div className="card-body d-flex flex-column align-items-start">
-                    <strong className="d-inline-block mb-2 text-success "><h1>Your Financial Goal</h1></strong>
-                    <h3>What do you see yourself in 5 years?</h3>
-                    <input className="form-control form-control-lg" type="text" placeholder=".form-control-lg"></input>
-                    <br></br>
-                    <h3>What is your financial goal?</h3>
-                    <input className="form-control form-control-lg" type="text" placeholder=".form-control-lg"></input>
-                    <br></br>
+            <div className="col">
+              <div className="card flex-md-row mb-4 box-shadow h-md-250">
+                <div className="card-body d-flex flex-column align-items-start">
+                  <strong className="d-inline-block mb-2 text-success ">
+                    <h1>Your Financial Goal</h1>
+                  </strong>
+                  <h3>What do you see yourself in 5 years?</h3>
+                  <input className="form-control form-control-lg" type="text" />
+                  <br />
+                  <h3>What is your financial goal?</h3>
+                  <input className="form-control form-control-lg" type="text" />
+                  <br />
 
-                    <h3>How do you want to pay off your debts?</h3>
-                    <input className="form-control form-control-lg" type="text" placeholder=".form-control-lg"></input>
-                    <br></br>
-                    <h3>How do you plan to invest for the long-term?</h3>
-                    <input className="form-control form-control-lg" type="text" placeholder=".form-control-lg"></input>
-                  </div>
+                  <h3>How do you want to pay off your debts?</h3>
+                  <input className="form-control form-control-lg" type="text" />
+                  <br />
+                  <h3>How do you plan to invest for the long-term?</h3>
+                  <input className="form-control form-control-lg" type="text" />
                 </div>
               </div>
-            </div> 
+            </div>
           </div>
-        </main>
+        </div>
+      </main>
     </div>
   );
 }
