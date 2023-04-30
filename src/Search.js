@@ -114,7 +114,6 @@ const terms = [
         "Rare events, hence 'outliers', which are largely not anticipated, but can have subsequent impacts, thereby generating major economic structual changes in behavior and the structure of economies.",
     },
   ];
-
 function Search() {
   const [searchTerm, setSearchTerm] = useState('');
   const [searchResults, setSearchResults] = useState([]);
@@ -132,8 +131,10 @@ function Search() {
 
   return (
     <div>
-      <input type="search" value={searchTerm} onChange={handleSearch}/>
-      <button class="btn btn-outline-primary" onClick={handleSearch} >Search</button>
+      <div>
+        <input type="search" value={searchTerm} onChange={handleSearch}/>
+        <button className="btn btn-outline-primary" onClick={handleSearch}>Search</button>
+      </div>
       <ul>
         {searchResults.map((result, index) => (
           <li key={index}>

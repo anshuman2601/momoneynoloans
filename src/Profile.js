@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useEffect, useState } from 'react';
 import Navbar from './Navbar';
 import { Link } from 'react-router-dom';
 import { useLocation } from 'react-router-dom';
@@ -6,9 +6,16 @@ import Chart from './Chart';
 
 function Profile() {
   const location = useLocation();
-  const { email } = location.state || {}; // if location.state is falsy, email will be undefined
+  const [email, setEmail] = useState(localStorage.getItem('email'));
   const name = email ? email.split('@')[0] : 'User'; // if email is falsy, name will be 'User'
-  
+
+  useEffect(() => {
+    if (location.state?.email) {
+      setEmail(location.state.email);
+      localStorage.setItem('email', location.state.email);
+    }
+  }, [location.state]);
+
   return (
     <div>
       <Navbar />
