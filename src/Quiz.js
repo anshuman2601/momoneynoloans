@@ -1,6 +1,7 @@
 import React, { useState } from "react";
 import Navbar from "./Navbar";
-import { Link } from "react-router-dom";
+import { useNavigate } from "react-router-dom";
+
 export const quiz = {
   topic: "Javascript",
   level: "Beginner",
@@ -15,7 +16,7 @@ export const quiz = {
         "c. You are earning enough money to be able to live well",
         "d. Your bills are generally paid by every due date",
       ],
-    
+
       correctAnswer:
         "b. You made a plan of your expenses to be less than or equal to your income ",
     },
@@ -27,7 +28,7 @@ export const quiz = {
         "c. 561 to 600",
         "d. 1000 to 1500",
       ],
-      
+
       correctAnswer: "a. 700 to 850 ",
     },
     {
@@ -38,7 +39,7 @@ export const quiz = {
         "c. Seek out college scholarships",
         "d. All of the above",
       ],
-      
+
       correctAnswer: "d. All of the above",
     },
     {
@@ -49,13 +50,80 @@ export const quiz = {
         "c. Keep your credit card balances under 30% of your credit limit",
         "d. Always pay in cash and do not get any credit cards",
       ],
-      
+
       correctAnswer: "d. Always pay in cash and do not get any credit cards",
     },
+    {
+      question: "5. What is a good way to save money?",
+      choices: [
+        "a. Pay yourself first",
+        "b. Save your change",
+        "c. Save your tax refund",
+        "d. All of the above",
+      ],
+
+      correctAnswer: "d. All of the above",
+    },
+    {
+      question: "6. Which is a method to fund your college education?",
+      choices: [
+        "a. Apply for financial aid using the FAFSA and TAP applications",
+        "b. Seek out less expensive college alternatives",
+        "c. Seek out college scholarships",
+        "d. All of the above",
+      ],
+
+      correctAnswer: "d. All of the above",
+    },
+    {
+      question: "7. Where could you get a free credit report with no annual fees?",
+      choices: [
+        "a. Annualcreditreport.com",
+        "b. Freecreditreport.com",
+        "c. From the U.S. Department of Finance",
+        "d. You can’t get a free credit report",
+      ],
+
+      correctAnswer: "d. All of the above",
+    },
+    {
+      question: "8. If your credit card is stolen and the thief runs up a total debt of $1,000, but you notify the issuer of the card as soon as you discover it is missing, what is the maximum amount that you must pay according to Federal law?",
+      choices: [
+        "a. $500",
+        "b. $1000",
+        "c. Nothing",
+        "d. $50",
+      ],
+
+      correctAnswer: "d. $50",
+    },
+    {
+      question: "9. Under which of the following circumstances would it be financially beneficial to you to borrow money to buy something now and repay it with future income?",
+      choices: [
+        "a. When you need to buy a car to get a much better paying job",
+        "b. When you need a vacation",
+        "c. When some clothes you like go on sale",
+        "d. When you want to invest the money and feel you could make more than the interest you are paying",
+      ],
+
+      correctAnswer: "a. When you need to buy a car to get a much better paying job",
+    },
+    {
+      question: "10.  If you earned a four-year college degree, how much more money/Income could you expect to earn than if you only had a high school diploma?",
+      choices: [
+        "a. About 10 times as much",
+        "b. No more; I would make about the same either way",
+        "c. A little more than 20% more",
+        "d. Much more than 70% more",
+      ],
+
+      correctAnswer: "d. Much more than 70% more",
+    },
+    
   ],
 };
 
-const Quiz = () => {
+function Quiz() {
   const [activeQuestion, setActiveQuestion] = useState(0);
   const [selectedAnswer, setSelectedAnswer] = useState("");
   const [showResult, setShowResult] = useState(false);
@@ -65,6 +133,15 @@ const Quiz = () => {
     correctAnswers: 0,
     wrongAnswers: 0,
   });
+  const navigate = useNavigate();
+  // navigate to home page
+  const navigateHome = () => {
+    navigate('/');
+  };
+  // navigate to profile page
+  const navigateProfile = () => {
+    navigate('/profile');
+  };
 
   const { questions } = quiz;
   const { question, choices, correctAnswer } = questions[activeQuestion];
@@ -129,15 +206,19 @@ const Quiz = () => {
                           {choices.map((answer, index) => (
                             <div key={index}>
                               <label>
-                            <input 
-                              type="radio"
-                              name="answer"
-                              value={answer}
-                              onClick={() => onAnswerSelected(answer, index)}
-                              checked={selectedAnswerIndex === index}
-                            />
-                            {answer}
-                          </label><br /><br />
+                                <input
+                                  type="radio"
+                                  name="answer"
+                                  value={answer}
+                                  onClick={() =>
+                                    onAnswerSelected(answer, index)
+                                  }
+                                  checked={selectedAnswerIndex === index}
+                                />
+                                {answer}
+                              </label>
+                              <br />
+                              <br />
                             </div>
                           ))}
                         </div>
@@ -156,20 +237,32 @@ const Quiz = () => {
                         </div>
                       </div>
                     ) : (
-                      <div className="result">
-                        <h3>Result</h3>
-                        <p>
-                          Total Question: <span>{questions.length}</span>
-                        </p>
-                        <p>
-                          Total Score:<span> {result.score}</span>
-                        </p>
-                        <p>
-                          Correct Answers:<span> {result.correctAnswers}</span>
-                        </p>
-                        <p>
-                          Wrong Answers:<span> {result.wrongAnswers}</span>
-                        </p>
+                      <div>
+                        <div className="result">
+                          <h3>Result</h3>
+                          <p>
+                            Total Question: <span>{questions.length}</span>
+                          </p>
+                          <p>
+                            Total Score:<span> {result.score}</span>
+                          </p>
+                          <p>
+                            Correct Answers:
+                            <span> {result.correctAnswers}</span>
+                          </p>
+                          <p>
+                            Wrong Answers:<span> {result.wrongAnswers}</span>
+                          </p>
+                        </div>
+                        <br />
+                        <div class="row">
+                          <div class="col-8">
+                          <button class="btn btn-primary" onClick={navigateHome}>Home</button>
+                          </div>
+                          <div class="col-4">
+                          <button class="btn btn-success" onClick={navigateProfile}>Go to Profile</button>
+                          </div>
+                        </div>
                       </div>
                     )}
                   </div>
