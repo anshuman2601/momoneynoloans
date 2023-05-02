@@ -11,9 +11,7 @@ function Home() {
   return (
     <div className="container">
       <Navbar />
-      <div class="my-search d-flex">
-        <Search />
-      </div>
+
       <main role="main" class="container">
         <div class="container">
           <br></br>
