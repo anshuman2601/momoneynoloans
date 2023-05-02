@@ -1,15 +1,19 @@
+/* eslint-disable jsx-a11y/anchor-is-valid */
 import "./App.css";
 import { Link } from "react-router-dom";
 import Videos from "./Videos";
 import Navbar from "./Navbar";
 import Chart from "./Chart";
+import Search from "./Search";
 import article from "./articlehome.png";
 
 function Home() {
   return (
-    <div className="App">
+    <div className="container">
       <Navbar />
-
+      <div class="my-search d-flex">
+        <Search />
+      </div>
       <main role="main" class="container">
         <div class="container">
           <br></br>

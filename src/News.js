@@ -14,9 +14,9 @@ function News() {
 
         <div class="row">
           <div class="col">
-            <div class="card w-75 p-3">
+            <div class="card w-175 p-6">
               <div class="card-body">
-                {<img src={article2} class="img-fluid" alt="artcle" />}
+                {<img src={article2} class="img-fluid" alt="article" />}
                 <h5 class="card-title">
                   Chicago Fed President Goolsbee says recent reports show
                   inflation is moving in the right direction
@@ -38,7 +38,7 @@ function News() {
           </div>
 
           <div class="col">
-            <div class="card w-75 p-3">
+            <div class="card w-175 p-6">
               <div class="card-body">
                 {<img src={article4} class="img-fluid" alt="artcle" />}
                 <h5 class="card-title">
@@ -65,9 +65,9 @@ function News() {
 
         <div class="row">
           <div class="col">
-            <div class="card w-75 p-3">
+            <div class="card w-175 p-6">
               <div class="card-body">
-                {<img src={article3} class="img-fluid" alt="artcle" />}
+                {<img src={article3} class="img-fluid" alt="article" />}
                 <h5 class="card-title">
                   What banking turmoil could mean for business and consumer
                   lending activity
@@ -85,8 +85,9 @@ function News() {
               </div>
             </div>
           </div>
+          
           <div class="col">
-            <div class="card w-75 p-3">
+            <div class="card w-175 p-6">
               <div class="card-body">
                 {<img src={article} class="img-fluid" alt="artcle" />}
                 <h5 class="card-title">
