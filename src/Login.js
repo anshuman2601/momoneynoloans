@@ -22,7 +22,7 @@ function Login() {
         <div className="col-md-6 mx-auto mt-5">
           <div className="card">
             <div className="card-header">
-              <h1 className="h3 mb-0">Login</h1>
+              <h1 className="h3 mb-0">Log-in</h1>
             </div>
             <div className="card-body">
               <form onSubmit={handleLogin}>
@@ -56,7 +56,7 @@ function Login() {
                   />
                 </div>
                 <button type="submit" className="btn btn-primary">
-                  Login
+                  Log-in
                 </button>
               </form>
             </div>
