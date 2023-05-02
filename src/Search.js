@@ -200,11 +200,9 @@ function Search() {
   };
 
   return (
-    <div>
-      <div>
-        <input class="searchbar" type="search" value={searchTerm} onChange={handleSearch}/>
-        <button className="btn btn-outline-primary" onClick={handleSearch}>Search</button>
-      </div>
+    <div style={{ display: "flex", alignItems: "center" }}>
+      <input className="searchbar" type="search" value={searchTerm} onChange={handleSearch}/>
+      <button className="btn btn-outline-primary" onClick={handleSearch}>Search</button>
       <ul>
         {searchResults.map((result, index) => (
           <li key={index}>
@@ -215,6 +213,7 @@ function Search() {
       </ul>
     </div>
   );
+  
 }
 
 export default Search;

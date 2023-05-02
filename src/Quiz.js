@@ -177,7 +177,7 @@ function Quiz() {
   const addLeadingZero = (number) => (number > 9 ? number : `0${number}`);
 
   return (
-    <div>
+    <div className="container">
       <Navbar />
       <main role="main" class="container">
         <div className="container">

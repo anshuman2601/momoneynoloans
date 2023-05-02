@@ -40,7 +40,7 @@ function Profile() {
     alert('Your changes have been saved!');
   };
   return (
-    <div>
+    <div className="container">
       <Navbar />
       <main role="main" className="container">
         <h1>{name}'s Knowledge Level</h1>

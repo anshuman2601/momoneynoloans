@@ -7,7 +7,7 @@ import article4 from "./article4.png";
 
 function News() {
   return (
-    <div>
+    <div className="container">
       <Navbar />
       <main role="main" class="container">
         <h1>News Page</h1>

@@ -15,47 +15,48 @@ function Navbar() {
 
   return (
     <div className="container-fluid">
-      <header className="blog-header py-3">
-        <div className="row flex-nowrap justify-content-between align-items-center">
-          <div className="col-2 pt-1 d-flex justify-content-start">
-            <Link className="text-muted" to="/login">
-              Log-In / Create an Account
-            </Link>
-          </div>
-          <div className="col-4 text-center">
-            <Link className="p-2 text-muted" to="/">
-              <img src={title} className="img-fluid w-150 h-16" width="125" height="50" alt="logo" />
-            </Link>
-          </div>
-          <div className="col-4 justify-content-end align-items-center d-none d-lg-flex">
-            <div className="my-search d-flex">
-              <Search />
-            </div>
-          </div>
-        </div>
-      </header>
-
-      <div className="nav-scroller py-1 mb-2">
-        <nav className="nav d-flex justify-content-between">
-          <Link className="p-2 text-muted" to="/">
-            Home
-          </Link>
-          <Link className="p-2 text-muted" to="/study">
-            Study
-          </Link>
-          <Link className="p-2 text-muted" to="/news">
-            World News
-          </Link>
-          <Link className="p-2 text-muted" to="/quiz">
-            Quiz
-          </Link>
-          <Link className="p-2 text-muted" to="/profile">
-            User Profile & Goals
-          </Link>
-        </nav>
+  <header className="blog-header py-3">
+    <div className="row align-items-center">
+      <div className="col-sm-4 text-left">
+        <Link className="text-muted" to="/login">
+          Log-In / Create an Account
+        </Link>
       </div>
-      <hr />
+      <div className="col-sm-4 text-center">
+        <Link className="p-2 text-muted" to="/">
+          <img src={title} className="img-fluid w-200 h-16" width="125" height="50" alt="logo" />
+        </Link>
+      </div>
+      <div className="col-sm-4 text-right">
+        <div className="my-search">
+          <Search />
+        </div>
+      </div>
     </div>
+  </header>
+
+  <div className="nav-scroller py-1 mb-2">
+    <nav className="nav d-flex justify-content-between">
+      <Link className="p-2 text-muted" to="/">
+        Home
+      </Link>
+      <Link className="p-2 text-muted" to="/study">
+        Study
+      </Link>
+      <Link className="p-2 text-muted" to="/news">
+        World News
+      </Link>
+      <Link className="p-2 text-muted" to="/quiz">
+        Quiz
+      </Link>
+      <Link className="p-2 text-muted" to="/profile">
+        User Profile & Goals
+      </Link>
+    </nav>
+  </div>
+  <hr />
+</div>
+
   );
 }
 

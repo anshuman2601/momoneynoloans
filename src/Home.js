@@ -101,13 +101,13 @@ function Home() {
         </div>
       </main>
 
-      <footer class="blog-footer">
-        <p></p>
-        <p>© 2023 FinEd.com </p>
-        <p>
-          <a href="#">Back to top</a>
-        </p>
-      </footer>
+      <div style={{ display: 'flex', flexDirection: 'column', minHeight: '15vh' }}>
+  <div style={{ flex: 1 }}> {/* The main content of the page */}</div>
+  <footer style={{ display: 'flex', justifyContent: 'center', alignItems: 'center', height: '50px' }}>
+    <p>© 2023 FinEd.com </p>
+    <p><a href="#">Back to top</a></p>
+  </footer>
+</div> 
     </div>
   );
 }

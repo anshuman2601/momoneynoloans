@@ -187,7 +187,7 @@ const terms = [
 
 function Study() {
   return (
-    <div>
+    <div className="container">
       <Navbar />
 
       <div role="main" class="container">
