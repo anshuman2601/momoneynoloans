@@ -3,10 +3,6 @@ import Navbar from "./Navbar";
 import { useNavigate } from "react-router-dom";
 
 export const quiz = {
-  topic: "Javascript",
-  level: "Beginner",
-  totalQuestions: 4,
-  perQuestionScore: 5,
   questions: [
     {
       question: "1. Being on a budget means:",
@@ -147,23 +143,27 @@ function Quiz() {
   const { question, choices, correctAnswer } = questions[activeQuestion];
 
   const onClickNext = () => {
+    // Check if selected answer is correct
+    const isCorrect = selectedAnswer === correctAnswer;
+    // Increment counters
+    const newResult = {
+      ...result,
+      correctAnswers: isCorrect ? result.correctAnswers + 1 : result.correctAnswers,
+      wrongAnswers: isCorrect ? result.wrongAnswers : result.wrongAnswers + 1,
+    };
+    setResult(newResult);
+    // Save result in local storage
+    localStorage.setItem('quizResult', JSON.stringify(newResult));
+    // Move to the next question
+    setSelectedAnswer("");
     setSelectedAnswerIndex(null);
-    setResult((prev) =>
-      selectedAnswer
-        ? {
-            ...prev,
-            score: prev.score + 5,
-            correctAnswers: prev.correctAnswers + 1,
-          }
-        : { ...prev, wrongAnswers: prev.wrongAnswers + 1 }
-    );
-    if (activeQuestion !== questions.length - 1) {
-      setActiveQuestion((prev) => prev + 1);
+    if (activeQuestion < questions.length - 1) {
+      setActiveQuestion(activeQuestion + 1);
     } else {
-      setActiveQuestion(0);
       setShowResult(true);
     }
   };
+  
 
   const onAnswerSelected = (answer, index) => {
     setSelectedAnswerIndex(index);

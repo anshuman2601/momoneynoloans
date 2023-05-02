@@ -3,11 +3,11 @@ import Navbar from './Navbar';
 import { Link } from 'react-router-dom';
 import { useLocation } from 'react-router-dom';
 import Chart from './Chart';
-import { correctAnswers, wrongAnswers } from './Quiz';
 
 function Profile() {
   const location = useLocation();
   const [email, setEmail] = useState(localStorage.getItem('email'));
+  const [result, setResult] = useState(localStorage.getItem('result'));
   const name = localStorage.getItem('name') || (email ? email.split('@')[0] : 'User'); // Check for name in local storage if email is falsy
   const [inputValues, setInputValues] = useState({
     fiveYears: '',
