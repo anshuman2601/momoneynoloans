@@ -2,10 +2,10 @@ import React, { useState } from "react";
 import Navbar from "./Navbar";
 import { useNavigate } from "react-router-dom";
 
-const quiz = {
-  topic: "Finance / Economics",
+export const quiz = {
+  topic: "Javascript",
   level: "Beginner",
-  totalQuestions: 10,
+  totalQuestions: 4,
   perQuestionScore: 5,
   questions: [
     {
@@ -134,12 +134,10 @@ function Quiz() {
     wrongAnswers: 0,
   });
   const navigate = useNavigate();
-
   // navigate to home page
   const navigateHome = () => {
     navigate('/');
   };
-
   // navigate to profile page
   const navigateProfile = () => {
     navigate('/profile');
@@ -156,7 +154,6 @@ function Quiz() {
             ...prev,
             score: prev.score + 5,
             correctAnswers: prev.correctAnswers + 1,
-            
           }
         : { ...prev, wrongAnswers: prev.wrongAnswers + 1 }
     );
@@ -166,10 +163,8 @@ function Quiz() {
       setActiveQuestion(0);
       setShowResult(true);
     }
-    
   };
 
-  
   const onAnswerSelected = (answer, index) => {
     setSelectedAnswerIndex(index);
     if (answer === correctAnswer) {
