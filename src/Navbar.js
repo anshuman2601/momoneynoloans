@@ -1,5 +1,5 @@
 import './App.css';
-import React from 'react';
+import React, { useState} from 'react';
 import { Link } from 'react-router-dom';
 import title from "./title.png";
 import Search from './Search';
@@ -33,18 +33,6 @@ function Navbar() {
             </div>
           </div>
         </header>
-        
-        <div class="nav-scroller py-1 mb-2">
-          <nav class="nav d-flex justify-content-between">
-            <Link class="p-2 text-muted" to="/">
-              Home
-            </Link>
-          </div>
-          <div className="col-4 d-flex justify-content-end align-items-center">
-            <Search />
-          </div>
-        </div>
-      </header>
 
       <div className="nav-scroller py-1 mb-2">
         <nav className="nav d-flex justify-content-between">
@@ -67,6 +55,7 @@ function Navbar() {
       </div>
       <hr />
     </div>
+    
   );
 }
 
